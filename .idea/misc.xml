@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11.0.4" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Documents/Learning/lagom/akka-quickstart-java" value="PREVIEW" />
+        <entry key="$USER_HOME$/Documents/Learning/lagom/dbetta-digital-app" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ScalaSbtSettings">
+    <option name="customVMEnabled" value="true" />
+    <option name="customVMPath" value="$USER_HOME$/.sdkman/candidates/java/8.0.232.hs-adpt" />
+  </component>
+</project>
