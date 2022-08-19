@@ -22,8 +22,8 @@
 
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"  class="text-white"><i class="" aria-hidden="true"></i> Add Disciplinary </a></button>
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="<?php echo base_url(); ?>employee/Employees" class="text-white"><i class="" aria-hidden="true"></i>  Employee List</a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plug"></i><a data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"  class="text-white"><i class="" aria-hidden="true"></i> Add Disciplinary </a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-server"></i><a href="<?php echo base_url(); ?>employee/Employees" class="text-white"><i class="" aria-hidden="true"></i>  Employee List</a></button>
                     </div>
                 </div>         
                 <div class="row">
@@ -45,16 +45,7 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>Employee Name</th>
-                                                <th>PIN</th>
-                                                <th>Title </th>
-                                                <th>Description</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot> -->
+
                                         <tbody>
                                            <?php foreach($desciplinary as $value): ?>
                                             <tr>
@@ -64,8 +55,8 @@
                                                 <td><?php echo substr("$value->description",0,10).'...' ?> </td>
                                                 <td><button class="btn btn-sm btn-success"><?php echo $value->action; ?></button></td>
                                                 <td  class="jsgrid-align-center ">
-                                                    <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light disiplinary" data-id="<?php echo $value->id; ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="DeletDisiplinary?D=<?php echo $value->id; ?>" onclick="confirm('Are you sure to delete this value?')" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                                    <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light disiplinary" data-id="<?php echo $value->id; ?>"><i class="fa fa-pencil-square"></i></a>
+                                                    <a href="DeletDisiplinary?D=<?php echo $value->id; ?>" onclick="confirm('Are you sure to delete this value?')" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -112,7 +103,7 @@
                                                 <div class="modal-footer">
                                                    <input type="hidden" name="id" value="">
                                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-success">Submit</button>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
                                                 </div>
                                                 </form>
                                             </div>

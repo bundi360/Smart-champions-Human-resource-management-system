@@ -16,15 +16,15 @@
             <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="<?php echo base_url(); ?>employee/Add_employee" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="<?php echo base_url(); ?>employee/Disciplinary" class="text-white"><i class="" aria-hidden="true"></i>  Disciplinary List</a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plug"></i><a href="<?php echo base_url(); ?>employee/Add_employee" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-server"></i><a href="<?php echo base_url(); ?>employee/Disciplinary" class="text-white"><i class="" aria-hidden="true"></i>  Disciplinary List</a></button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="card card-outline-info">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white"><i class="fa fa-user-o" aria-hidden="true"></i> Employee List</h4>
+                                <h4 class="m-b-0 text-white"><i class="fa fa-user-circle" aria-hidden="true"></i> Employee List</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive ">
@@ -39,16 +39,7 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>ID </th>
-                                                <th>Employee Name</th>
-                                                <th>Email </th>
-                                                <th>Contact </th>
-                                                <th>Roll</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot> -->
+
                                         <tbody>
                                            <?php foreach($invalidem as $value): ?>
                                             <tr>
@@ -58,7 +49,7 @@
                                                 <td><?php echo $value->em_phone; ?></td>
                                                 <td><?php echo $value->em_role; ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="<?php echo base_url(); ?>employee/view?I=<?php echo base64_encode($value->em_id); ?>" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="<?php echo base_url(); ?>employee/view?I=<?php echo base64_encode($value->em_id); ?>" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>

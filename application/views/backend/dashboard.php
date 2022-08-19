@@ -177,6 +177,7 @@
 			<!-- Column -->
 		</div>
 		<!-- ============================================================== -->
+		<!--This is the div for running projects-->
 	</div>
 	<div class="container-fluid">
 		<?php $notice = $this->notice_model->GetNoticelimit();
@@ -219,6 +220,7 @@
 					</div>
 				</div>
 			</div>
+			<!--			This is the div for the to_do_list-->
 			<!-- Column -->
 			<div class="col-lg-4">
 				<div class="card">
@@ -267,6 +269,8 @@
 			</div>
 		</div>
 		<!-- Row -->
+
+		<!--		Here comes the noticeboard-->
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="card">
@@ -292,6 +296,7 @@
 												<a href="<?php echo base_url(); ?>assets/images/notice/<?php echo $value->file_url ?>"
 												   target="_blank"><?php echo $value->file_url ?></a></mark>
 										</td>
+
 										<td style="width:100px"><?php echo $value->date ?></td>
 									</tr>
 								<?php endforeach; ?>
