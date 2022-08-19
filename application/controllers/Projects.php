@@ -273,22 +273,7 @@ class Projects extends CI_Controller
 						$success = $this->project_model->insert_members_Data($data);
 					}
 					echo "Successfully Added";
-				} /*else {
-					$success = $this->project_model->Update_Tasks($id, $data);
-					$success = $this->project_model->Delet_members_Data($id);
-					$emid    = $this->input->post('assignto[]');
-					foreach ($emid as $dataarray) {
-						$data = array();
-						$data = array(
-							'project_id' => $proid,
-							'assign_user' => $dataarray,
-							'user_type' => 'Collaborators'
-						);
-
-						$success = $this->project_model->insert_members_Data($data);
-					}
-					echo "Successfully Updated";
-				}*/
+				}
 
 			}
 		} else {
