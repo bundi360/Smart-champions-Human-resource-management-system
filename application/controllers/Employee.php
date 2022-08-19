@@ -117,7 +117,7 @@ class Employee extends CI_Controller
 			} else {
 				if ($this->employee_model->Does_email_exists($email) && $password != $confirm) {
 					$this->session->set_flashdata('formdata', 'Email is already Exist or Check your password');
-					echo "Email is already Exist or Check your password";
+					echo "Email is already Exist or Check your password😂";
 				} else {
 					if ($_FILES['image_url']['name']) {
 						$file_name = $_FILES['image_url']['name'];
@@ -758,6 +758,7 @@ class Employee extends CI_Controller
 		}
 	}
 
+//experience of an employee is deleted.
 	public function EXPvalueDelet()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
