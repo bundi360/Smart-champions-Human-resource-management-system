@@ -10,32 +10,38 @@ class Project_model extends CI_Model
 
 	}
 
+//Adds project data.
 	public function Add_ProjectData($data)
 	{
 		$this->db->insert('project', $data);
 	}
 
+//Add tasks.
 	public function Add_Tasks($data)
 	{
 		$this->db->insert('pro_task', $data);
 	}
 
+//Adds project files.
 	public function Add_Project_File($data)
 	{
 		$this->db->insert('project_file', $data);
 	}
 
+//Inserts project files.
 	public function Add_FieldData($data)
 	{
 		$this->db->insert('field_visit', $data);
 	}
 
+// Updates field data.
 	public function Update_FieldData($id, $data)
 	{
 		$this->db->where('id', $id);
 		$this->db->update('field_visit', $data);
 	}
 
+//Get projects by value.
 	public function GetProjectsValue()
 	{
 		$sql = "SELECT * FROM `project`";
@@ -44,6 +50,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get file by Id.
 	public function GetFilebyFid($id)
 	{
 		$sql = "SELECT * FROM `project_file` WHERE `project_file`.`id`='$id'";
@@ -52,6 +59,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get nots value by Id.
 	public function GetNotesValueId($id)
 	{
 		$sql = "SELECT * FROM `pro_notes` WHERE `pro_notes`.`id`='$id'";
@@ -60,6 +68,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get assets category by Id.
 	public function GetAssetsCategory()
 	{
 		$sql = "SELECT * FROM `assets_category`";
@@ -68,6 +77,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get project details by Id.
 	public function GetprojectDetails($id)
 	{
 		$sql = "SELECT * FROM `project` WHERE `id`='$id'";
@@ -76,6 +86,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get Logistic value by Id.
 	public function GetLogisTicValue($id)
 	{
 		$sql = "SELECT * FROM `logistic_assign` WHERE `ass_id`='$id'";
@@ -84,42 +95,49 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//update project data.
 	public function update_ProjectData($id, $data)
 	{
 		$this->db->where('id', $id);
 		$this->db->update('project', $data);
 	}
 
+//It updates project expenses.
 	public function Updated_Project_expenses($id, $data)
 	{
 		$this->db->where('id', $id);
 		$this->db->update('pro_expenses', $data);
 	}
 
+// This function is used to update tasks.
 	public function Update_Tasks($id, $data)
 	{
 		$this->db->where('id', $id);
 		$this->db->update('pro_task', $data);
 	}
 
+//This function is used to update project notes.
 	public function Update_Project_Notes($id, $data)
 	{
 		$this->db->where('id', $id);
 		$this->db->update('pro_notes', $data);
 	}
 
+//This function is used to update members task data.
 	public function Update_members_Data($id, $data)
 	{
 		$this->db->where('task_id', $id);
 		$this->db->update('assign_task', $data);
 	}
 
+//This is the function that is used to update the assets.
 	public function Update_Assets($id, $data)
 	{
 		$this->db->where('ass_id', $id);
 		$this->db->update('assets', $data);
 	}
 
+//This function is used to get all logistics data.
 	public function GetAllLogistice($id)
 	{
 		$sql = "SELECT `logistic_assign`.*,
@@ -134,6 +152,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//This function is used to get all task list.
 	public function GetTasksAllList($id)
 	{
 		$sql = "SELECT `pro_task`.*,
@@ -148,6 +167,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get tasks based in the office by list.
 	public function GetTasksOfficeList($id)
 	{
 		$sql = "SELECT `pro_task`.*,
@@ -164,6 +184,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+// Get the tasks filed by list.
 	public function GetTasksFiledList($id)
 	{
 		$sql = "SELECT `pro_task`.*,
@@ -180,6 +201,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//task list
 	public function GetTasksBothList($id)
 	{
 		$sql = "SELECT `pro_task`.*,
@@ -196,6 +218,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get all tasks value by Id.
 	public function GetTasksValue($id)
 	{
 		$sql = "SELECT `pro_task`.*,
@@ -212,6 +235,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get files list by id.
 	public function GetFilesList($id)
 	{
 		$sql = "SELECT `project_file`.*,
@@ -224,6 +248,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get filed application.
 	public function GetF_i_e_l_dApplication()
 	{
 		$sql = "SELECT `field_visit`.*,
@@ -261,6 +286,7 @@ class Project_model extends CI_Model
 		return $result;
 	}
 
+//Get noteslist
 	public function GetNotesList($id)
 	{
 		$sql = "SELECT `pro_notes`.*,

@@ -342,6 +342,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//THis function is used to add files.
 	public function Add_File()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -387,6 +388,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Add pro notes
 	public function Add_Pro_Notes()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -426,6 +428,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//add expenses for the project.
 	public function Add_Expenses()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -466,6 +469,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//This function adds all tasks.
 	public function All_Tasks()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -479,6 +483,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Add logistic by Id.
 	public function LogisTicById()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -491,6 +496,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Add task by ID.
 	public function TasksById()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -503,6 +509,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Add expenses by ID.
 	public function ExpensesById()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -514,6 +521,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Add notes by Id.
 	public function NotesById()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -525,6 +533,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Add a new project by Id.
 	public function projectbyId()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -536,6 +545,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Delete a task by Id.
 	public function TasksDeletByid()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -554,6 +564,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Delete a file by Id.
 	public function FileDeletById()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -570,6 +581,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Delete an expense by Id.
 	public function deletExpenses()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -581,6 +593,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Delete notes.
 	public function DeletNotes()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -592,6 +605,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Delete all projects.
 	public function pDelet()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
@@ -603,6 +617,7 @@ class Projects extends CI_Controller
 		}
 	}
 
+//Delete all assets.
 	public function AssetsDelet()
 	{
 		if ($this->session->userdata('user_login_access') != False) {
