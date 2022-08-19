@@ -9,18 +9,7 @@ class Csvimport
 	private $delimiter = ",";
 	private $detect_line_endings = FALSE;
 
-	/**
-	 * Function that parses a CSV file and returns results
-	 * as an array.
-	 *
-	 * @access  public
-	 * @param filepath        string  Location of the CSV file
-	 * @param column_headers  array   Alternate values that will be used for array keys instead of first line of CSV
-	 * @param detect_line_endings  boolean  When true sets the php INI settings to allow script to detect line endings. Needed for CSV files created on Macs.
-	 * @param initial_line  integer  Sets the line of the file from which start parsing data.
-	 * @param delimiter  string  The values delimiter (e.g. ";" or ",").
-	 * @return  array
-	 */
+
 	public function get_array($filepath = FALSE, $column_headers = FALSE, $detect_line_endings = FALSE, $initial_line = FALSE, $delimiter = FALSE)
 	{
 		// Raise memory limit (for big files)
