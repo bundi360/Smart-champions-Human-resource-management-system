@@ -6,7 +6,7 @@
 	<!-- ============================================================== -->
 	<div class="row page-titles">
 		<div class="col-md-5 align-self-center">
-			<h3 class="text-themecolor"><i class="fa fa-university" aria-hidden="true"></i> Employee</h3>
+			<h3 class="text-themecolor"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Employee</h3>
 		</div>
 		<div class="col-md-7 align-self-center">
 			<ol class="breadcrumb">
@@ -101,24 +101,24 @@
 								<label>Blood Group </label>
 								<select name="blood" class="form-control custom-select">
 									<option>Select Blood Group</option>
-									<option value="O+">O+</option>
-									<option value="O-">O-</option>
-									<option value="A+">A+</option>
-									<option value="A-">A-</option>
-									<option value="B+">B+</option>
-									<option value="B-">B-</option>
-									<option value="AB+">AB+</option>
+									<option value="O+">A</option>
+									<option value="O-">B</option>
+									<option value="A+">AB</option>
+									<option value="A-">O</option>
+									<!--									<option value="B+">B+</option>-->
+									<!--									<option value="B-">B-</option>-->
+
 								</select>
 							</div>
 							<div class="form-group col-md-3 m-t-20">
-								<label>NID</label>
-								<input type="text" name="nid" class="form-control" value="" placeholder="(Max. 10)"
-									   minlength="10" required>
+								<label>ID No.</label>
+								<input type="text" name="nid" class="form-control" value="" placeholder="(Max. 9)"
+									   minlength="7" required>
 							</div>
 							<div class="form-group col-md-3 m-t-20">
 								<label>Contact Number </label>
-								<input type="text" name="contact" class="form-control" value="" placeholder="1234567890"
-									   minlength="10" maxlength="15" required>
+								<input type="text" name="contact" class="form-control" value="" placeholder="0712345678"
+									   minlength="10" maxlength="13" required>
 							</div>
 							<div class="form-group col-md-3 m-t-20">
 								<label>Date Of Birth </label>
@@ -171,3 +171,4 @@
 			</div>
 		</div>
 		<?php $this->load->view('backend/footer'); ?>
+	</div>

@@ -22,14 +22,14 @@
 				<?php if ($this->session->userdata('user_type') == 'EMPLOYEE') { ?>
 
 				<?php } else { ?>
-					<button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal"
+					<button type="button" class="btn btn-info"><i class="fa fa-plug"></i><a data-toggle="modal"
 																							data-target="#exampleModal"
 																							data-whatever="@getbootstrap"
 																							class="text-white"><i
 									class=""
 									aria-hidden="true"></i>
 							Add Project </a></button>
-					<button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a
+					<button type="button" class="btn btn-primary"><i class="fa fa-server"></i><a
 								href="<?php echo base_url(); ?>Projects/All_Tasks" class="text-white"><i class=""
 																										 aria-hidden="true"></i>
 							Task List</a></button>
@@ -71,11 +71,11 @@
 										<td class="jsgrid-align-center ">
 											<a href="view?P=<?php echo base64_encode($value->id); ?>" title="Edit"
 											   class="btn btn-sm btn-primary waves-effect waves-light"><i
-														class="fa fa-pencil-square-o"></i></a>
+														class="fa fa-pencil-square"></i></a>
 											<a href="pDelet?D=<?php echo base64_encode($value->id); ?>" title="Delete"
 											   onclick="alert('Are You Sure To Delete This Project?')"
 											   class="btn btn-sm btn-danger waves-effect waves-light projectdelet"><i
-														class="fa fa-trash-o"></i></a>
+														class="fa fa-trash"></i></a>
 										</td>
 									</tr>
 								<?php endforeach; ?>

@@ -23,7 +23,7 @@
 <div class="row m-b-10">
    <div class="col-12">
       <button type="button" class="btn btn-info">
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-plug"></i>
       <a data-toggle="modal" data-target="#appmodel" data-whatever="@getbootstrap" class="text-white" id="addNewApplication">
       <i class="" aria-hidden="true"></i> Add Application 
       </a>
@@ -55,21 +55,7 @@
                         <th>Action</th>
                      </tr>
                   </thead>
-                  <!-- <tfoot>
-                     <tr>
-                        <th>ID</th>
-                        <th>Project Name</th>
-                        <th>Location</th>
-                        <th>Employee PIN</th>
-                        <th>Employee Name</th>
-                        <th>start Date</th>
-                        <th>Approx. End Date</th>
-                        <th>Total Days</th>
-                        <th>Actual Return Date</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                     </tr>
-                  </tfoot> -->
+
                   <tbody>
                      <?php foreach($application as $value): ?>
                      <tr style="vertical-align:top">
