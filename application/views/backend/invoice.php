@@ -122,22 +122,22 @@
                                         <tbody style="border: 1px solid #ececec;">
                                             <tr>
                                                 <td>Basic Salary</td>
-                                                <td class="text-right"><?php echo $addition[0]->basic; ?> USD</td>
+                                                <td class="text-right"><?php echo $addition[0]->basic; ?> Kshs</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
                                                 <td>Madical Allowance</td>
-                                                <td class="text-right"> <?php echo $addition[0]->medical; ?>  USD</td>
+                                                <td class="text-right"> <?php echo $addition[0]->medical; ?>  Kshs</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
                                                 <td>House Rent</td>
-                                                <td class="text-right"><?php echo $addition[0]->house_rent; ?>  USD</td>
+                                                <td class="text-right"><?php echo $addition[0]->house_rent; ?>  Kshs</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
                                                 <td>Conveyance Allowance</td>
-                                                <td class="text-right"><?php echo $addition[0]->conveyance; ?>  USD</td>
+                                                <td class="text-right"><?php echo $addition[0]->conveyance; ?>  Kshs</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
@@ -156,12 +156,12 @@
                                                 <td>Working Hour (<?php echo $salary_info->total_days; ?> hrs)</td>
                                                 <td class="text-right">
                                                     <?php
-                                                        if($a > 0) { echo round($a,2).' USD'; }
+                                                        if($a > 0) { echo round($a,2).' Kshs'; }
                                                     ?>
                                                 </td>
                                                 <td class="text-right">
                                                     <?php
-                                                        if($d > 0) { echo round($d,2).' USD'; }
+                                                        if($d > 0) { echo round($d,2).' Kshs'; }
                                                     ?>        
                                                 </td>
                                                 <td class="text-right"> </td>
@@ -171,7 +171,7 @@
                                                 <td class="text-right"> </td>
                                                 <td class="text-right"> <?php
                                                         /*if($d > 0) { echo round($d,2).' USD'; }*/
-                                                        echo $salary_info->diduction .'USD';
+                                                        echo $salary_info->diduction .'Kshs';
                                                     ?> </td>
                                                 
                                             </tr>-->
@@ -184,13 +184,13 @@
                                         <tfoot class="tfoot-light">
                                             <tr>
                                                 <th>Total</th>
-                                                <th class="text-right"><?php $total_add = $salary_info->basic + $salary_info->medical + $salary_info->house_rent + $salary_info->bonus+$a; echo round($total_add,2); ?> USD</th>
-                                                <th class="text-right"><?php $total_did = $salary_info->loan+$salary_info->diduction; echo round($total_did,2); ?> USD</th>
+                                                <th class="text-right"><?php $total_add = $salary_info->basic + $salary_info->medical + $salary_info->house_rent + $salary_info->bonus+$a; echo round($total_add,2); ?> Kshs</th>
+                                                <th class="text-right"><?php $total_did = $salary_info->loan+$salary_info->diduction; echo round($total_did,2); ?> Kshs</th>
                                             </tr>
                                             <tr>
                                                 <th></th>
                                                 <th class="text-right">Net Pay</th>
-                                                <th class="text-right"><?php echo $salary_info->total_pay/*round($total_add - $total_did,2)*/; ?> USD</th>
+                                                <th class="text-right"><?php echo $salary_info->total_pay/*round($total_add - $total_did,2)*/; ?> Kshs</th>
                                             </tr>
                                         </tfoot>
                                     </table>

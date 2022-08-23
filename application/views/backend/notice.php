@@ -16,7 +16,7 @@
 	<div class="container-fluid">
 		<div class="row m-b-10">
 			<div class="col-12">
-				<button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal"
+				<button type="button" class="btn btn-info"><i class="fa fa-plug"></i><a data-toggle="modal"
 																						data-target="#noticemodel"
 																						data-whatever="@getbootstrap"
 																						class="text-white "><i class=""
@@ -42,14 +42,7 @@
 									<th>Date</th>
 								</tr>
 								</thead>
-								<!-- <tfoot>
-									<tr>
-										<th>Sl</th>
-										<th>Title</th>
-										<th>File</th>
-										<th>Date</th>
-									</tr>
-								</tfoot> -->
+
 								<tbody>
 								<?php foreach ($notice as $value): ?>
 									<tr>

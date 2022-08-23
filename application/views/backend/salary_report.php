@@ -27,7 +27,7 @@ $this->load->view('backend/sidebar');
 		<div class="row m-b-10">
 			<div class="col-12">
 				<button type="button" class="btn btn-primary">
-					<i class="fa fa-bars">
+					<i class="fa fa-server">
 					</i>
 					<a href="<?php
 					echo base_url();
@@ -46,7 +46,7 @@ $this->load->view('backend/sidebar');
 						</h4>
 					</div>
 					<div class="card-body">
-						<!--Savd vdgff gdfg dfg dfgdfg df  gd gdd gfd-->
+
 						<div class="row">
 							<div class="col-12">
 								<div class="card">

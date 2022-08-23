@@ -16,8 +16,8 @@
          <div class="container-fluid">
             <div class="row m-b-10"> 
                 <div class="col-12">
-                    <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#loanmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Loan </a></button>
-                    <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="<?php echo base_url(); ?>Loan/installment" class="text-white"><i class="" aria-hidden="true"></i>  Loan Installment</a></button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-plug"></i><a data-toggle="modal" data-target="#loanmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Loan </a></button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-server"></i><a href="<?php echo base_url(); ?>Loan/installment" class="text-white"><i class="" aria-hidden="true"></i>  Loan Installment</a></button>
                 </div>
             </div> 
             <div class="row">
@@ -35,21 +35,6 @@
                                             <th>Name</th>
                                             <th>Employee Code</th>
                                             <th>Amount</th>
-<!--                                            <th>Interest Percentage </th>
-                                            <th>Installment Period </th>-->
-                                            <th>Installment </th>
-                                            <th>Total Pay </th>
-                                            <th>Total Due </th>
-                                            <th>Approve Date </th>
-                                            <th>Status </th>
-                                            <th>Action </th>
-                                        </tr>
-                                    </thead>
-                                    <!-- <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Employee Code</th>
-                                            <th>Amount</th>
                                            <th>Interest Percentage </th>
                                             <th>Installment Period </th>
                                             <th>Installment </th>
@@ -59,15 +44,16 @@
                                             <th>Status </th>
                                             <th>Action </th>
                                         </tr>
-                                    </tfoot> -->
+                                    </thead>
+
                                     <tbody>
                                        <?php foreach($loanview as $value): ?>
                                         <tr>
                                             <td><?php echo $value->first_name.' '.$value->last_name ?></td>
                                             <td><?php echo $value->em_code ?></td>
                                             <td><?php echo $value->amount ?></td>
-<!--                                            <td><?php #echo $value->interest_percentage.''.'%' ?></td>
-                                            <td><?php #echo $value->install_period ?></td> -->
+                                           <td><?php echo $value->interest_percentage.''.'%' ?></td>
+                                            <td><?php echo $value->install_period ?></td>
                                             <td><?php echo $value->installment ?></td> 
                                             <td><?php echo $value->total_pay ?></td>
                                             <td><?php echo $value->total_due ?></td>
@@ -109,10 +95,10 @@
                                 <label for="message-text" class="control-label col-md-3">Amount</label>
                                 <input type="text" name="amount" value="" class="form-control col-md-8 amount" id="recipient-name1" required>
                             </div> 
-<!--                            <div class="form-group row">
+                            <div class="form-group row">
                                 <label for="message-text" class="control-label col-md-3">Interest Percentage</label>
                                 <input type="number" name="interest" value="" class="form-control col-md-8" id="recipient-name1" required>
-                            </div>-->                                                         
+                            </div>
                             <div class="form-group row">
                                 <label class="control-label col-md-3">Approve Date</label>
                                 <input type="text" name="appdate" class="form-control col-md-8 mydatetimepickerFull" id="recipient-name1" value="" required>
