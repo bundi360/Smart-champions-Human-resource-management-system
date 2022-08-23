@@ -19,8 +19,8 @@
         <div class="row m-b-10">
             <?php // if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> 
                 <div class="col-12">
-                    <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#appmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Application </a></button>
-                    <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="<?php echo base_url(); ?>leave/Holidays" class="text-white"><i class="" aria-hidden="true"></i> Holiday List</a></button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-plug"></i><a data-toggle="modal" data-target="#appmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Application </a></button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-server"></i><a href="<?php echo base_url(); ?>leave/Holidays" class="text-white"><i class="" aria-hidden="true"></i> Holiday List</a></button>
                 </div>                       
             <?php // } ?> 
         </div> 
@@ -47,19 +47,7 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <!-- <tfoot>
-                                    <tr>
-                                        <th>Employee Name</th>
-                                        <th>PIN</th>
-                                        <th>Leave Type</th>
-                                        <th>Apply Date</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Duration</th>
-                                        <th>Leave Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </tfoot> -->
+
                                 <tbody>
                                     <?php foreach($application as $value): ?>
                                     <tr style="vertical-align:top">
@@ -111,13 +99,13 @@
                                            <?php if($value->leave_status =='Approve'){ ?>
                                            
                                              <?php } elseif($value->leave_status =='Not Approve'){ ?>
-                                            <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=<?php echo $value->em_id; ?>  data-id="<?php echo $value->id; ?>" data-value="Approve" data-duration="<?php echo $value->leave_duration; ?>" data-type="<?php echo $value->typeid; ?>">Approve</a>       
+                                            <a href="" title="Edit" class="btn btn-sm btn-info waves-effect waves-light Status" data-employeeId=<?php echo $value->em_id; ?>  data-id="<?php echo $value->id; ?>" data-value="Approve" data-duration="<?php echo $value->leave_duration; ?>" data-type="<?php echo $value->typeid; ?>">Approve</a>
                                             <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "<?php echo $value->id; ?>" data-value="Rejected" >Reject</a>
                                             <br> 
 
                                             <?php } elseif($value->leave_status =='Rejected'){ ?>
                                             <?php } ?>
-                                            <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="<?php echo $value->id; ?>" ><i class="fa fa-pencil-square-o"></i></a>
+                                            <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="<?php echo $value->id; ?>" ><i class="fa fa-pencil-square"></i></a>
                                             
                                         </td>
                                         <?php } ?>

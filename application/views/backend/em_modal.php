@@ -41,6 +41,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- sample modal content -->
 <div class="modal fade" id="ExpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
 	<div class="modal-dialog" role="document">

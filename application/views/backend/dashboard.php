@@ -66,7 +66,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="d-flex flex-row">
-							<div class="round align-self-center round-danger"><i class="ti-calendar"></i></div>
+							<div class="round align-self-center round-danger"><i class="ti-desktop"></i></div>
 							<div class="m-l-10 align-self-center">
 								<h3 class="m-b-0">
 									<?php
@@ -88,7 +88,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="d-flex flex-row">
-							<div class="round align-self-center round-success"><i class="ti-bag"></i></div>
+							<div class="round align-self-center round-success"><i class="ti-wallet"></i></div>
 							<div class="m-l-10 align-self-center">
 								<h3 class="m-b-0">
 									<?php
@@ -324,7 +324,7 @@
 								</thead>
 								<tbody>
 								<?php foreach ($holiday as $value): ?>
-									<tr style="background-color:#e3f0f7">
+									<tr style="background-color:#f2f6f7">
 										<td><?php echo $value->holiday_name ?></td>
 										<td><?php echo $value->from_date; ?></td>
 									</tr>
