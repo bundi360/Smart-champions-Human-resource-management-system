@@ -20,6 +20,7 @@ class Payroll_model extends CI_Model
 		$this->db->insert('pay_salary', $data);
 	}
 
+//Get salary type
 	public function GetsalaryType()
 	{
 		$sql = "SELECT * FROM `salary_type` ORDER BY `salary_type` ASC";
@@ -28,6 +29,7 @@ class Payroll_model extends CI_Model
 		return $result;
 	}
 
+//Get bank information.
 	public function GetBankInfo($eid)
 	{
 		$sql = "SELECT * FROM `bank_info` WHERE `em_id`='$eid'";
@@ -306,6 +308,7 @@ class Payroll_model extends CI_Model
 		$result = $this->db->insert('pay_salary', $data);
 		return $result;
 	}
+
 //Update paidSalary data
 	public function updatePaidSalaryData($id, $data)
 	{
@@ -313,6 +316,7 @@ class Payroll_model extends CI_Model
 		$result = $this->db->update('pay_salary', $data);
 		return $result;
 	}
+
 //Get salary data
 	public function getSalaryRecord($emid, $month, $year)
 	{

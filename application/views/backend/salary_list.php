@@ -74,7 +74,7 @@
 										<td><?php echo $individual_info->status; ?></td>
 										<td class="jsgrid-align-center ">
 											<a href="<?php echo base_url(); ?>payroll/invoice?Id=<?php echo $individual_info->pay_id; ?>&em=<?php echo $individual_info->emp_id; ?>"
-											   title="Edit" class="btn btn-sm btn-danger waves-effect waves-light"><i
+											   title="print" class="btn btn-sm btn-danger waves-effect waves-light"><i
 														class="fa fa-print"></i></a>
 										</td>
 									</tr>

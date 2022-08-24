@@ -358,14 +358,11 @@ class Payroll extends CI_Controller
 
 			$data['addition'] = $this->payroll_model->getAdditionDataBySalaryID($data['salaryvalue']->id);
 			$data['diduction'] = $this->payroll_model->getDiductionDataBySalaryID($data['salaryvalue']->id);
-			//$data['diduction'] = $this->payroll_model->getDiductionDataBySalaryID($data['salaryvalue']->id);
 
-			//$month = date('m');
-			//$data['loanInfo']      = $this->payroll_model->getLoanInfoInvoice($id, $month);
 			$data['otherInfo'] = $this->payroll_model->getOtherInfo($eid);
 			$data['bankinfo'] = $this->payroll_model->GetBankInfo($eid);
 
-			//Count Add/Did
+
 			$month_init = $data['salary_info']->month;
 
 			$month = date("n", strtotime($month_init));
@@ -378,8 +375,6 @@ class Payroll extends CI_Controller
 			if ($month < 10) {
 				$month = '0' . $month;
 			}
-
-			//$data['hourlyAdditionDiduction']      = $month;
 
 
 			$employeePIN = $this->getPinFromID($id_em);

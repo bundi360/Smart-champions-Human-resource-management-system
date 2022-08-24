@@ -20,10 +20,10 @@ class Projects extends CI_Controller
 
 	public function index()
 	{
-		#Redirect to Admin dashboard after authentication
+
 		if ($this->session->userdata('user_login_access') == 1) redirect('dashboard/Dashboard');
 		$data = array();
-		#$data['settingsvalue'] = $this->dashboard_model->GetSettingsValue();
+
 		$this->load->view('login');
 	}
 
@@ -36,12 +36,8 @@ class Projects extends CI_Controller
 			$data['employee'] = $this->employee_model->emselect();
 			$data['proemployee'] = $this->employee_model->ProjectEmployee($id);
 			$data['details'] = $this->project_model->GetprojectDetails($id);
-			/*      $data['office'] = $this->project_model->GetTasksOfficeList($id);
-            $data['filed'] = $this->project_model->GetTasksFiledList($id);
-            $data['both'] = $this->project_model->GetTasksBothList($id);*/
 			$data['files'] = $this->project_model->GetFilesList($id);
 			$data['tasklist'] = $this->project_model->GetTasksAllList($id);
-
 			$data['notes'] = $this->project_model->GetNotesList($id);
 			$data['expenses'] = $this->project_model->GetExpensesList($id);
 			$data['assets'] = $this->project_model->GetAllLogisticList();
@@ -105,7 +101,7 @@ class Projects extends CI_Controller
 
 			if ($this->form_validation->run() == FALSE) {
 				echo validation_errors();
-				#redirect("projects/All_Projects");
+
 			} else {
 				$data = array();
 				$data = array('project_id' => $projectID, 'emp_id' => $emid, 'field_location' => $fieldLocation, 'start_date' => $startdate, 'approx_end_date' => $enddate, 'total_days' => $totalDays, 'notes' => $notes, 'actual_return_date' => $actualReturnDate, 'status' => 'Not Approve');
@@ -145,19 +141,17 @@ class Projects extends CI_Controller
 
 			if ($this->form_validation->run() == FALSE) {
 				echo validation_errors();
-				#redirect("projects/All_Projects");
+
 			} else {
 				$data = array();
 				$data = array('pro_name' => $title, 'pro_start_date' => $startdate, 'pro_end_date' => $enddate, 'pro_description' => $details, 'pro_summary' => $summery, 'progress' => $progress, 'pro_status' => $status);
 				if (empty($id)) {
 					$success = $this->project_model->Add_ProjectData($data);
-					#$this->session->set_flashdata('feedback','Successfully Added');
-					#redirect("projects/All_Projects");
+
 					echo "Successfully Added";
 				} else {
 					$success = $this->project_model->update_ProjectData($id, $data);
-					#$this->session->set_flashdata('feedback','Successfully Updated');
-					#redirect("projects/view?P=" .base64_encode($id));
+
 					echo "Successfully Updated";
 				}
 
@@ -197,7 +191,7 @@ class Projects extends CI_Controller
 			} else {
 				$data = array();
 				$data = array('pro_id' => $proid, /*'ass_id' => $logid,*/
-					/*'assign_to' => $head,*/
+
 					'task_title' => $title, 'description' => $details, 'start_date' => $startdate, 'end_date' => $enddate, 'create_date' => $date, 'task_type' => $type, 'location' => $location, 'status' => $status, 'approve_status' => $astatus);
 				if (empty($id)) {
 					$success = $this->project_model->Add_Tasks($data);
@@ -253,11 +247,11 @@ class Projects extends CI_Controller
 
 			if ($this->form_validation->run() == FALSE) {
 				echo validation_errors();
-				#redirect("projects/view?P=" .base64_encode($id));
+
 			} else {
 				$data = array();
 				$data = array('pro_id' => $proid, /*'ass_id' => $logid,*/
-					/*'assign_to' => $head,*/
+
 					'task_title' => $title, 'description' => $details, 'start_date' => $startdate, 'end_date' => $enddate, 'create_date' => $date, 'task_type' => $type, /*                    'location'=> $location,*/
 					'status' => $status, 'approve_status' => 'Approve');
 				if (empty($id)) {
